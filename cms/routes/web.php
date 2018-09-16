@@ -251,3 +251,8 @@ Route::get('development/supplier/{supplier_id}/',function($supplier_id){
 Auth::routes();
 
 Route::get('/home', 'SupplierController@menu');
+
+Route::get('/logout',function(){
+    Auth::logout();
+    return redirect('/');
+});

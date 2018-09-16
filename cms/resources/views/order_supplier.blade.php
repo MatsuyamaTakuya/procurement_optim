@@ -2,6 +2,8 @@
 @section('content')
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+<canvas id="myChart" height=50px></canvas>
 
 
 <div class="panel-body">
@@ -19,6 +21,12 @@
                     <thead>
                         <th>Order#</th>
                         <th>part#</th>
+                        <th>Ord Qty</th>
+                        <th>U/P</th>
+                        <th>C/D</th>
+                        <th>id</th>
+                        <th>Rcd Qty</th>
+                        <th></th>
                     </thead>
                     <!-- テーブル本体 -->
                     <tbody>
@@ -73,7 +81,24 @@
             </div>
         </div>
     @endif
-    <!--  ook: 既に登録されてる本 リスト -->
-   
-    </div>
+</div>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+    datasets: [{
+      label: 'apples',
+      data: [12, 19, 3, 17, 6, 3, 7],
+      backgroundColor: "rgba(153,255,51,0.4)"
+    }, {
+      label: 'oranges',
+      data: [2, 29, 5, 5, 2, 3, 10],
+      backgroundColor: "rgba(255,153,0,0.4)"
+    }]
+  }
+});
+</script>
+
 @endsection

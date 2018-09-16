@@ -41,7 +41,7 @@
                                 <form action="{{ url('supplier_edit/'.$supplier->id) }}" method="POST">
                                    {{ csrf_field() }}
                                    <button type="submit" class="btn btn-primary">
-                                       <i class="glyphicon glyphicon-trash"></i>更新
+                                       <i class="glyphicon glyphicon-refresh"></i>更新
                                    </button>
                                 </form>
                             </td>
@@ -49,7 +49,7 @@
                                 <form action="{{ '/contract/supplier/'.$supplier->supplier_id }}" method="GET">
                                    {{ csrf_field() }}
                                    <button type="submit" class="btn btn-primary">
-                                       <i class="glyphicon glyphicon-trash"></i>契約
+                                       <i class="glyphicon glyphicon-tag"></i>契約
                                    </button>
                                 </form>
                             </td>
@@ -57,7 +57,7 @@
                                 <form action="{{ '/order/supplier/'.$supplier->supplier_id }}" method="GET">
                                    {{ csrf_field() }}
                                    <button type="submit" class="btn btn-primary">
-                                       <i class="glyphicon glyphicon-trash"></i>注文
+                                       <i class="glyphicon glyphicon-usd"></i>注文
                                    </button>
                                 </form>
                             </td>
@@ -66,7 +66,7 @@
                                 <form action="{{ '/development/supplier/'.$supplier->supplier_id }}" method="GET">
                                    {{ csrf_field() }}
                                    <button type="submit" class="btn btn-primary">
-                                       <i class="glyphicon glyphicon-trash"></i>開発
+                                       <i class="glyphicon glyphicon-circle-arrow-up"></i>開発
                                    </button>
                                 </form>
                             </td>
